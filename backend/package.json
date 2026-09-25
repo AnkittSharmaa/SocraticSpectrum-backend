@@ -5,9 +5,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "seed": "npm run seed:questions && npm run seed:philosophers",
+    "seed:questions": "node seedQuestions.js",
+    "seed:philosophers": "node seedPhilosophers.js"
   },
- 
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,6 +21,6 @@
     "mongoose": "^8.15.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.14"
   }
 }

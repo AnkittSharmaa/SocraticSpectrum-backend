@@ -4,7 +4,7 @@ const ResultSchema = new Schema({
   answers: {
     type: [Number],
     required: true,
-    validate: arr => arr.length === 20
+    validate: arr => arr.length > 0 && arr.every(value => Number.isInteger(value) && value >= 1 && value <= 5)
   },
   scores: [{
     name: { type: String, required: true },
